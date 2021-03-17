@@ -1,0 +1,467 @@
+@charset "UTF-8";
+/* foot_bg  */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background-color: #fefe3e !important;
+  position: relative;
+  font-family: arial, "Microsoft YaHei", "SimHei", "Microsoft JhengHei", "微軟正黑體";
+}
+img {width: 100%;}
+button {
+  font-family: arial, "Microsoft YaHei", "SimHei", "Microsoft JhengHei", "微軟正黑體";
+}
+a {text-decoration: none; display: block;}
+a:hover {text-decoration: none;}
+a:focus, input:focus, button:focus, textarea:focus, select:focus {
+  outline: 0;
+  text-decoration: none;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+span {vertical-align: baseline;}
+p {margin: 0;line-height: 1.5;}
+html, body {min-height: 100%;}
+
+.bo {border: 2px solid #00ff00;}
+.box_close {display: none;}
+.clearfix {display: block;}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+* html .clearfix {height: 1%;}
+
+/* ----------- 共用區塊 -------------- */
+/*table > tr:first-child > td:first-child {
+  position: relative;
+}*/
+.font_w{font-weight:600;}
+.red_txt{color:#ff0000;}
+.blue_txt{color:#002060;}
+/* 問題沒填加註*號 */
+.red_star:before{
+  content:'*';
+  font-size:40px;
+  font-weight:600;
+  color:#ff0000;
+  position:absolute;
+  top:2px;
+  left:-16px;
+}
+
+/* 按鈕樣是共用 */
+.all_a {
+background: #f24461;
+background: -moz-linear-gradient(top, #f24461 0%, #dc1c2a 100%);
+background: -webkit-linear-gradient(top, #f24461 0%,#dc1c2a 100%);
+background: linear-gradient(to bottom, #f24461 0%,#dc1c2a 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f24461', endColorstr='#dc1c2a',GradientType=0 );
+transition: all 0.5s;
+-ms-transition: all 0.5s;
+
+font-size:26px;
+color:#fff;
+font-weight:600;
+letter-spacing:6px;
+}
+.all_a:hover {
+background: #dc1c2a; /* Old brnext_btowsers */
+background: -moz-linear-gradient(top, #dc1c2a 6%, #dc1c2a 6%, #f24461 81%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #dc1c2a 6%,#dc1c2a 6%,#f24461 81%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #dc1c2a 6%,#dc1c2a 6%,#f24461 81%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc1c2a', endColorstr='#f24461',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* mask_box */
+.mask_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  background: rgba(0, 0, 0, 0.85);
+  z-index:999;
+  /*display: none;*/
+}
+.mask_box .jump_box{
+  width:1024px;
+  height:775px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../images/pc_mask.png") center top no-repeat;
+  margin:30px 0 0 0;
+}
+.mask_box .jump_box a{ 
+  position:absolute;
+  top:93px;
+  right:96px;
+  width:51px;
+  height:51px;
+}
+
+/* pc_wrap */
+.total_wrap {
+  position:relative;
+  width: 100%;
+  height:1080px;
+  background: url("../images/pc_bg.jpg") center top no-repeat;
+}
+/* 問卷底圖 */
+.q_total_wrap {
+  position:relative;
+  width: 100%;
+  height:1080px;
+  background: url("../images/PC_inner_bg.jpg") center top no-repeat;
+}
+/* 完成問卷感謝底圖 */
+.thank_total_wrap{
+  position: relative;
+  width:100%;
+  height: 1080px;
+  background: url("../images/pc_thanks_bg.jpg") center top no-repeat;  
+}
+
+header{
+  width:1020px;
+  height:75px;
+  margin:0 auto;
+}
+
+header .logo {
+  width: 155px;
+  height: 58px;
+  float: left;
+  margin:15px 0 0 0;
+  padding-top:0px;
+}
+
+header .menu_btn {
+  width: 340px;
+  height: 45px;
+  float:right;
+  margin-top:15px;
+}
+header .menu_btn a {
+  display: inline-block;
+  position: relative;
+  width: 107px;
+  height: 45px;
+  float: left;
+  font-weight:600;
+  text-align:center;
+  background:#a61594;
+  padding-left:32px;
+  text-decoration:none;
+}
+header .menu_btn a span {
+  color: #fff;
+  font-size: 12px;
+  line-height: 45px;
+}
+header .menu_btn a + a{ margin-left:8px; }
+header .menu_btn a:hover{background:#fff;}
+header .menu_btn a:hover span{
+  color:#a61594;
+}
+
+/* 按鈕_規則 */
+header .menu_btn a.rule_b:before {
+  content: "";
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  top: 7px;
+  left:5px;
+  background: url("../images/rule.png") no-repeat;
+}
+header .menu_btn a.rule_b:hover:before {
+  background: url("../images/rule_h.png") no-repeat;
+}
+/* 按鈕_首頁 */
+header .menu_btn a.index_b:before {
+  content: "";
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  background: url("../images/index.png") no-repeat;
+}
+header .menu_btn a.index_b:hover:before {
+  background: url("../images/index_h.png") no-repeat;
+}
+/* 按鈕_客服 */
+header .menu_btn a.customer_b:before {
+  content: "";
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  background: url("../images/customer.png") no-repeat;
+}
+header .menu_btn a.customer_b:hover:before {
+  background: url("../images/customer_h.png") no-repeat;
+}
+
+/* section 區塊 -- 首頁帳號登入區 */
+
+section {
+  width:1020px;
+  /*height:100%;*/
+  margin: 0 auto;
+  clear:both;
+}
+section .login_info{
+  width:580px;
+  height:155px;
+  margin:475px auto 0 auto;
+}
+section .login_info input{
+  width:580px;
+  height:65px;
+  font-size:24px;
+  color:#9f9f9f;
+  padding-left:20px;
+  border:3px solid #ffa201;
+  font-family: arial, "Microsoft YaHei", "SimHei", "Microsoft JhengHei", "微軟正黑體";
+}
+section .login_info button{
+  margin:15px 0 0 0;
+  width:100%;
+  height:65px;
+  text-align:center;
+  cursor:pointer;
+  border-style:none;
+}
+section .login_info button span{
+  line-height:65px;
+}
+
+section .login_info a{
+  margin:15px 0 0 0;
+  width:100%;
+  height:65px;
+  text-align:center;
+}
+section .login_info a span{
+  line-height:65px;
+}
+
+/* section 完成問卷感謝區塊 */
+section .thank_inner{
+  width:580px;
+  margin:605px auto 0 auto;
+}
+section .thank_inner a{
+  margin:15px 0 0 0;
+  width:100%;
+  height:65px;
+  text-align:center;
+}
+section .thank_inner a span{
+  line-height:65px;
+}
+section .thank_inner button{
+  margin:15px 0 0 0;
+  width:100%;
+  height:65px;
+  text-align:center;
+  cursor:pointer;
+  border-style:none;
+}
+section .thank_inner button span{
+  line-height:65px;
+}
+
+/* section 區塊 -- 問題區 */
+section.q_wrap{
+  width:937px;
+  overflow:hidden;
+  margin:195px auto 0 auto;
+}
+section.q_wrap .q_inner_left{
+  width:788px;
+  float:left;
+  background:#fff;
+  border:3px solid #ffa201;
+}
+
+section.q_wrap .q_inner_right{
+  width:134px;
+  float:right;
+}
+section.q_wrap .q_inner_right ul{width:134px; overflow:hidden;}
+section.q_wrap .q_inner_right ul li{
+  display:block;
+  width:134px;
+  height:113px;
+  background: url('../images/red_bau_all.png') no-repeat;
+  background-size:cover;
+  background-position:0 -114px;
+}
+.red_bau_open{background-position:0 0 !important;}
+
+/* ----- 問卷內容設定 ------ */
+
+/* list 未選取 */
+.qa_list ul {
+  width:652px; 
+  height:53px; 
+  /*padding:13px 0 0 0;*/
+}
+.qa_list ul li {
+  /*position:relative;*/
+  display: inline-block;
+  float:left;
+  width:162px;
+  height:40px;
+  line-height:40px; 
+  font-weight:bold; 
+  font-size:22px;
+  color:#ac6f04;
+  background:#e79506;
+  text-align:center;
+  margin:23px 0 0 0;
+  border-radius:8px 8px 0 0;
+}
+/* list 選取中 */
+.qa_list_h{
+  position:relative;
+}
+.qa_list_h span{
+  position:absolute;
+  bottom:0;
+  display:block;
+  width:162px;
+  height:53px;
+  background-color:#ffa201;
+  color:#fff; 
+  line-height:53px;
+  border-radius:8px 8px 0 0;
+}
+
+.qa_title {font-size:18px;}
+
+.qa_num {font-size:18px; position:relative; vertical-align: top;}
+.qa_num span{display:block; /*padding-top:5px;*/}
+
+section.q_wrap .q_inner_left .q_box01{padding:20px;}
+section.q_wrap .q_inner_left .q_box01 div{width:100%;}
+
+section.q_wrap .q_inner_left .q_box01 table{width:100%;}
+section table tr td.p_add{padding-bottom:15px;}
+
+/*form div {margin-bottom: 10px;}*/
+label {
+  display:inline-block;
+  cursor: pointer;
+  font-size: 0.8vw;
+  margin:1% 0;
+  width:100%;
+}
+/*label + label{margin-left:1%;}*/
+label select{
+  height:30px; 
+  border:2px solid #ffa201; 
+  font-size:18px;
+  font-family: arial, "Microsoft YaHei", "SimHei", "Microsoft JhengHei", "微軟正黑體";
+}
+input[type=radio],input[type=checkbox]{
+  display: none;
+}
+input[type=text]{
+  border-style:none; 
+  border-bottom:1px solid #000; 
+  font-size:18px;
+}
+input + i {
+  display: inline-block;
+  vertical-align: middle; /*-- 設定文字與框框對其 --*/
+  position: relative;
+  top:-2px;
+}
+label i img{width:20px; height:20px;}
+label > span{
+  display: inline-block;
+  font-size:18px;
+  font-family: arial, "Microsoft YaHei", "SimHei", "Microsoft JhengHei";
+}
+input:checked + i::before {
+  content: '';
+  width: 19px;
+  height: 19px;
+  background: url(../images/hook.png) no-repeat center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.other {
+  border-style:none; 
+  border-bottom:1px solid #000; 
+  font-size:18px; 
+  padding:0 0 4px 0;
+}
+.r_txt{color:#ec3a53;}
+
+/* ----- 按鈕(下一步) 設定 ------ */
+section.q_wrap .next_btn{
+  width:580px;
+  height:58px;
+  margin:20px auto;
+  text-align:center;
+  clear:both;
+  line-height:58px;
+  padding-top:20px;
+}
+section.q_wrap .next_btn button{
+  width:580px;
+  height:58px;
+  border-style:none;
+}
+section.q_wrap .next_btn a{display:block; height:58px;}
+
+/* ----- footer 設定 ------ */
+
+footer{
+  width:100%; 
+  /*height:100px;  */
+  /*position:fixed;
+  bottom:0;*/
+}
+footer .footer_inner {
+  width: 160px;
+  /*padding:150px 0 0 0;*/
+  margin:290px auto 0 auto;
+  text-align:center;
+}
+

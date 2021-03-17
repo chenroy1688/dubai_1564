@@ -1,0 +1,377 @@
+// 背景&按鈕
+@import module
+// @media 設定
+// @import browser
+
+*
+ margin: 0
+ padding: 0
+ list-style: none
+ -webkit-font-smoothing: antialiased
+ -moz-font-smoothing: grayscale
+ -webkit-box-sizing: border-box 
+ -moz-box-sizing: border-box 
+ -o-box-sizing: border-box
+ box-sizing: border-box
+
+body
+ width: 100%
+ background-color: #ccc
+ position: relative
+ font-family: arial,'Microsoft YaHei','SimHei','Microsoft JhengHei',"微軟正黑體"
+
+img
+ width: 100%
+button
+ font-family: arial,'Microsoft YaHei','SimHei','Microsoft JhengHei',"微軟正黑體"
+a
+ text-decoration: none
+ display: block
+ &:hover 
+  text-decoration: none
+a:focus, input:focus, button:focus, textarea:focus, select:focus
+ outline: 0
+ text-decoration: none
+ul li 
+ margin: 0
+ padding: 0
+ list-style: none
+*:before, *:after
+ -webkit-box-sizing: border-box
+ -moz-box-sizing: border-box
+ box-sizing: border-box
+span
+ vertical-align: baseline
+p 
+ margin: 0
+ line-height: 1.5
+html,body 
+ min-height: 100%
+
+.bo 
+ border: 1px solid #fff
+
+.close
+ display: none
+
+.clearfix
+ display: block
+ &:after
+  visibility: hidden
+  display: block
+  font-size: 0
+  content: ""
+  clear: both
+  height: 0
+
+* html .clearfix
+ height: 1%
+
+.all_a
+ +linear
+ &:hover
+  +linear_hover
+
+/* pc_wrap */
+.total_wrap
+ width: 100%
+ background: url("../images/pc_bg.jpg") center top no-repeat
+
+.pc_wrap
+ width: 1000px
+ height: 939px
+ margin: 0 auto
+
+.pc_wrap .logo
+ width: 140px
+ height: 45px
+ float: left
+ margin: 20px 0 0 35px
+
+.pc_wrap .menu_btn
+ width: 296px
+ height: 29px
+ float: right
+ margin-top: 20px
+ a
+  display: block
+  position: relative
+  width: 127px
+  height: 29px
+  float: left
+  &:last-child
+   float: right
+  &:last-child:before
+   content: ''
+   width: 26px
+   height: 30px
+   position: absolute
+   top: 0
+   left: -35px
+   background: url("../images/website.png") no-repeat
+  &:before
+   content: ''
+   width: 26px
+   height: 30px
+   position: absolute
+   top: 0
+   left: -35px
+   background: url("../images/customer.png") no-repeat
+  span
+   color: #fff
+   font-size: 16px
+   padding-bottom: 5px
+   letter-spacing: 2px
+   line-height: 29px
+   border-bottom: 1px solid #fff
+section
+ width: 635px
+ height: 52px
+ margin: 0 auto
+ padding-top: 488px
+ ul li
+  display: block
+  float: left
+  &:first-child
+   width: 140px
+   text-align: center
+   font-size: 24px
+   font-weight: 600
+   color: #d8361f
+   padding-top: 8px
+  &:first-child:before
+   content: '●'
+   top: 0
+   padding-right: 10px
+ input
+  width: 315px 
+  height: 40px
+  border: 1px solid #b39b41
+  padding-left: 15px
+  font-size: 16px
+  font-family: arial,'Microsoft YaHei','SimHei','Microsoft JhengHei',"微軟正黑體"
+ button
+  width: 140px
+  height: 44px
+  border-radius: 10px
+  box-shadow: 1px 1px 1px #c8c6c6
+  font-size: 20px
+  cursor: pointer
+  font-weight: 700
+  color: #6b4a15
+  margin-left: 15px
+  +linear
+  &:hover
+   text-shadow: 0px 0px 15px #dfca56,0px 0px 15px #dfca56,0px 0px 15px #dfca56,0px 0px 15px #dfca56
+
+.button_box
+ width: 913px
+ height: 375px
+ position: relative
+ margin: 75px auto 0 auto
+.button_box .a_box
+ position: absolute
+ top: 200px
+ left: 50px
+ a
+  display: block
+  width: 212px
+  height: 60px
+  background: url('../images/btn01.png') no-repeat
+  &:hover
+   background: url('../images/btn01_h.png') no-repeat
+  &:last-child
+   margin-top: 20px
+   background: url('../images/btn02.png') no-repeat
+   &:hover
+    background: url('../images/btn02_h.png') no-repeat
+
+footer
+ width: 100%
+ height: 56px
+ +foot_bg
+
+.footer_inner
+ width: 240px
+ margin: 0 auto
+ span
+  display: block
+  margin: 0 auto
+  font-size: 14px
+  width: 240px
+  height: 23px
+  line-height: 23px
+  color: #ea5b47
+  padding-top: 20px
+
+ // phone_wrap
+.phone_wrap
+ width: 100%
+ height: 322vw
+ background-color: #7f1f12
+.phone_wrap header
+ height: 92vw
+ background: url('../images/pc_head_bg.jpg') no-repeat
+ background-size: cover
+ z-index: 0
+.phone_wrap .logo_box 
+ height: 14vw
+ background: rgba(0,0,0,.7)
+.phone_wrap .logo_box .p_logo
+ width: 22vw
+ height: 5.5vw
+ float: left
+ margin: 5vw 0 0 8vw
+ a
+  display: block
+  height: 5.5vw
+
+.phone_wrap .logo_box .p_menu
+ width: 45vw
+ height: 4.4vw
+ float: right
+ margin: 5.6vw 5vw 0 0
+ a
+  display: inline-block
+  width: 20vw
+  height: 4.4vw
+  float: left
+  &:first-child
+   background: url('../images/menu01.png') no-repeat
+   background-size: cover
+  &:last-child
+   background: url('../images/menu02.png') no-repeat
+   float: right
+   background-size: cover
+.phone_wrap .main_box
+ height: 55vw
+ background-color: #fff
+.phone_wrap .main_box .sub_box
+ width: 85vw
+ height: 40vw
+ margin: 0 auto
+ padding-top: 7.4vw
+.phone_wrap .main_box .sub_box div
+ text-align: center
+ span
+  font-size: 5.5vw
+  color: #d8361f
+  &:before
+   content: '●'
+   width: 2.3vw
+   padding-right: 2vw
+  &:after
+   content: '●'
+   width: 2.3vw
+   padding-left: 2vw
+ &:nth-child(2) input
+  width: 100%
+  height: 11vw
+  margin-top: 5vw
+  padding-left: 2vw
+  font-size: 5vw
+  color: #c0c0c0
+  border: 1px solid #b39b41
+  font-family: arial,'Microsoft YaHei','SimHei','Microsoft JhengHei',"微軟正黑體"
+ &:nth-child(2)
+  ::-webkit-input-placeholder
+   color: #c0c0c0
+  :-ms-input-placeholder
+   color: #c0c0c0
+  ::-moz-placeholder
+   color: #c0c0c0
+   opacity: 1
+ &:last-child a
+  display: block
+  width: 100%
+  height: 11.5vw
+  border-radius: 13px
+  margin-top: 4.4vw
+  box-shadow: 3px 3px 2px #999
+  +phone_btn
+  &:hover
+   text-shadow: 0px 0px 15px #dfca56,0px 0px 15px #dfca56,0px 0px 15px #dfca56,0px 0px 15px #dfca56
+  span
+   display: block
+   font-size: 5vw
+   color: #674914
+   font-weight: 600
+   text-align: center
+   letter-spacing: 5vw
+   line-height: 11.5vw
+   &:before
+    content: ''
+   &:after
+    content: ''
+
+.phone_wrap .p_save
+ width: 100%
+ height: 164vw
+ position: relative
+ background: url("../images/p_savebg.jpg") no-repeat
+ background-size: cover
+ a
+  display: block
+  width: 42vw
+  height: 11vw
+  position: absolute
+  top: 18vw
+  right: 5vw
+  background: url("../images/p_btn1.png") no-repeat
+  background-size: cover
+  &:hover
+   background: url("../images/p_btn1_h.png") no-repeat
+   background-size: cover
+ a:last-child
+  position: absolute
+  top: 33.5vw 
+  right: 5vw
+  background: url("../images/p_btn2.png") no-repeat
+  background-size: cover
+  &:hover
+   background: url("../images/p_btn2_h.png") no-repeat
+   background-size: cover
+
+.phone_wrap footer .footer_box
+ text-align: center
+ font-size: 3.5vw
+ padding-top: 4vw
+ color: #fd7966
+
+
+// //mixin變數
+// @mixin breakpoint($point)
+// //判斷變數是pc、pad還是mobile，再依照判斷出來的載入對應的media query
+// @if $point == pc
+//  @media only screen and (max-width: 1024px)
+//   @content 
+// @else if $point == pad 
+//  @media only screen and (max-width: 768px)  
+//   @content 
+// @else if $point == mobile 
+//  @media only screen and (max-width: 320px)   
+//   @content 
+
+// .one
+//   width: 600px
+//  +breakpoint(pc)
+//   width: 300px
+//   height: 50px
+//  +breakpoint(pad)
+//   width: 100%
+
+// @media (max-width: 1024px)
+// .pc_wrap
+//  border: 3px solid #ff0000
+
+
+
+
+
+
+  
+
+
+
+
+
